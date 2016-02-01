@@ -1,7 +1,7 @@
 // Modules
-var express = require('express');
-var morgan  = require('morgan');
-var bodyParser = require('body-parser');
+var express     =   require('express');
+var morgan      =   require('morgan');
+var bodyParser  =   require('body-parser');
 
 // App Build and Config
 var app = express();
