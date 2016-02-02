@@ -5,13 +5,16 @@ var bodyParser  =   require('body-parser');
 
 // App Build and Config
 var app = express();
-app.use(express.static('./public'));
+app.use(express.static('./client/public'));
 app.use( bodyParser.urlencoded({extended: true}) );
-app.set('view engine', 'ejs');
 
-// Routing
-var index = require('./routes/index');
-app.use('/', index);
+app.set('views', __dirname + '/client/views')
+app.set('view engine', 'ejs')
+
+var indexRouter = require('./server/routes/index');
+
+// Routers
+app.use('/', indexRouter);
 
 // Listening
 var port = 8080;
