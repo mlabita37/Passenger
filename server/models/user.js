@@ -1,11 +1,7 @@
-// ~~~ Modules ~~~ //
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 var crypto = require('crypto');
 
-// ~~~ Schemas ~~~ //
-
-// User
 var UserSchema = mongoose.Schema({
   username: {type: String},
   password: {type: String},
@@ -24,5 +20,4 @@ var UserSchema = mongoose.Schema({
   avatar: {type: String}
 },{timestamps: true});
 
-// ~~~ Exports ~~~//
 module.exports = mongoose.model('User', UserSchema);
